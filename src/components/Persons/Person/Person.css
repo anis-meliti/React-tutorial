@@ -1,0 +1,51 @@
+.Person{
+    width:50%;
+    margin: auto;
+    border: 1px solid #eee;
+    box-shadow: 0px 2px 2px #ccc;
+    padding: 16px;
+    text-align: center;
+    display: block;
+}
+.outputText{
+    padding: 2%;
+    font-size: 14pt;
+}
+
+.button{
+    margin: auto;
+    padding: 2%;
+    border: 1.5px solid #8886f5;
+    cursor: pointer;
+    border-radius: 09%;
+    background-color: #ffff; 
+    display: inherit;
+    font-size: 14pt;
+    font-style: oblique;
+    outline: none;
+}
+
+.button:hover{
+        background-color:green;
+        color:#ffff;
+}
+.bottonPressed{
+    color: #ffff;
+    background-color: #8886f5;
+}
+.inputText{
+    width:50%;
+    text-align: justify;
+    display: inline-block;
+}
+/*@media(min-width:500px){
+    .Person {width: 450px}
+}*/
+.add{
+    padding: 5px 30px;
+    background-color: #fff;
+    margin-top: 20px;
+    margin-right: 10px;
+    display: inline-block;
+    border: 1px solid #8886f5 
+}
