@@ -18,7 +18,7 @@
     border: 1.5px solid #8886f5;
     cursor: pointer;
     border-radius: 09%;
-    background-color: #ffff; 
+    background-color: #fff; 
     display: inherit;
     font-size: 14pt;
     font-style: oblique;
@@ -27,10 +27,10 @@
 
 .button:hover{
         background-color:green;
-        color:#ffff;
+        color:#fff;
 }
 .bottonPressed{
-    color: #ffff;
+    color: #fff;
     background-color: #8886f5;
 }
 .inputText{

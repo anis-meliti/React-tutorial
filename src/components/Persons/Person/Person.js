@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import classes from'./Person.css';
+import withClasses from '../../../hoc/withClasses';
 
 class Person extends Component{
     constructor(props){
@@ -41,4 +43,7 @@ class Person extends Component{
     
 }
 
-export default Person;
+Person.PropTypes={
+age:PropTypes.number
+};
+export default withClasses(Person, Person.classes);

@@ -1,8 +1,9 @@
 
 import React, { Component } from 'react';
-
 import Persons from '../components/Persons/Persons';
 import Cockpit from '../components/cockpit/cockpit';
+import withClasses from '../hoc/withClasses';
+import Aux from '../hoc/Aux';
 
 class App extends Component {
   constructor(props){
@@ -14,6 +15,7 @@ class App extends Component {
         {id:2,name :"Anis2" , age:27}
       ],
       showPerson:false,
+      toggelClicked:0 
       }
   }
   
@@ -49,7 +51,13 @@ class App extends Component {
   taggelPersonsHandler=()=>{
     
       const doesShow= this.state.showPerson;
-      this.setState({showPerson:!doesShow});
+      this.setState((previousState, props)=>{
+        return{
+        showPerson:!doesShow,
+        toggelClicked: previousState.toggelClicked+1
+      }
+    }
+        );
       
     }
     deletePersonsHandler=(indexPerson)=>{
@@ -84,17 +92,18 @@ class App extends Component {
     return (
      
     
-        <div>
+        <Aux>
           <Cockpit
           appTitle={this.props.title}
           showPerson={this.state.showPerson}
           persons={this.state.persons}
           clicked={this.taggelPersonsHandler}/>
           {persons}
-        </div>
+        </Aux>
  
     );
   }
 }
 
-export default App;
+
+export default withClasses(App, App.Classes);
