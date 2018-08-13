@@ -1,5 +1,6 @@
 import React from 'react';
 import classes from '../Persons/Person/Person.css';
+import Aux from '../../hoc/Aux';
 
 
 const cockpit= (props)=>{
@@ -9,10 +10,10 @@ if(props.showPerson){
 }
 
     return(
-        <div className= {classes.container} >
+        <Aux>
                   <button className={style}
                     onClick={props.clicked}> Show/hide</button>
-          </div>
+          </Aux>
     );
 
 }
